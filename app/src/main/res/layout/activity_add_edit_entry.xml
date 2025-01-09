@@ -1,0 +1,60 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Eingabefeld für Beschreibung -->
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Beschreibung"
+        android:inputType="text"
+        android:importantForAutofill="yes"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bildvorschau -->
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Foto Vorschau" />
+
+    <!-- Button: Foto aufnehmen -->
+    <Button
+        android:id="@+id/btnCapturePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto aufnehmen"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Button: Bild aus Galerie auswählen -->
+    <Button
+        android:id="@+id/btnChooseImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bild aus Galerie auswählen"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Button: Speichern -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speichern"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Anzeige für aktuelle GPS-Koordinaten -->
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Koordinaten werden geladen..."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

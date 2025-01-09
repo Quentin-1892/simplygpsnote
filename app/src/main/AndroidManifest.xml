@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.simplygpsnote">
+
+    <!-- App-Berechtigungen -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Optional: Berechtigungen für Medienzugriff -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"
+        android:maxSdkVersion="32" />
+
+    <!-- Optional: Entfernt deprecated ACCESS_BACKGROUND_LOCATION Berechtigung -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"
+        android:maxSdkVersion="30" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Simplygpsnote"
+        tools:targetApi="31">
+
+        <!-- MainActivity: Startpunkt der App -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- AddEditEntryActivity: Hinzufügen/Bearbeiten eines Eintrags -->
+        <activity
+            android:name=".AddEditEntryActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- Ermöglicht das Scannen von Mediendateien -->
+                <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+            </intent-filter>
+        </activity>
+
+        <!-- EntryListActivity: Anzeige aller gespeicherten Einträge -->
+        <activity
+            android:name=".EntryListActivity"
+            android:exported="true" />
+
+        <!-- EntryDetailActivity: Detailansicht eines Eintrags -->
+        <activity
+            android:name=".EntryDetailActivity"
+            android:exported="true" />
+
+        <!-- FileProvider: Bereitstellung von URIs für Kamera-Apps -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.simplygpsnote.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>

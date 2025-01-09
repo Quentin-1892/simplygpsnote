@@ -1,0 +1,74 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Beschreibung bearbeiten -->
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Beschreibung"
+        android:inputType="text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bildanzeige -->
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Foto wird angezeigt"
+        android:scaleType="centerCrop" />
+
+    <!-- Standortanzeige -->
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Koordinaten werden geladen..."
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Änderungen speichern -->
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Änderungen speichern"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Eintrag löschen -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eintrag löschen"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Favoriten-Button -->
+    <Button
+        android:id="@+id/btnToggleFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Favorit markieren"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zu Favoriten hinzufügen"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

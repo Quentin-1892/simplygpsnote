@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Zugriff auf Bilder im Pictures-Verzeichnis -->
+    <external-files-path
+        name="images"
+        path="Pictures/" />
+
+    <!-- Zugriff auf den Cache -->
+    <external-cache-path
+        name="cache"
+        path="." />
+
+    <!-- Zugriff auf Downloads -->
+    <external-path
+        name="downloads"
+        path="Download/" />
+
+    <!-- Zugriff auf das gesamte externe Verzeichnis -->
+    <external-path
+        name="external"
+        path="." />
+</paths>
